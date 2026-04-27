@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-primary-dark: #050505;
+  --color-secondary-dark: #0A0A1A;
+  --color-card-bg: #111122;
+  --color-accent-blue: #2563EB;
+  --color-neon-blue: #60A5FA;
+}
+
+@layer base {
+  body {
+    @apply bg-primary-dark text-white font-sans antialiased selection:bg-neon-blue/30;
+  }
+}
+
+.bento-card {
+  @apply bg-secondary-dark border border-white/10 rounded-[2rem] transition-all duration-300;
+}
+
+.glass-navbar {
+  @apply sticky top-0 z-50 backdrop-blur-xl bg-secondary-dark/80 border-b border-white/10;
+}
+
+.btn-primary {
+  @apply px-8 py-3 bg-white text-black font-bold rounded-xl hover:bg-neon-blue hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)];
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border border-white/20 font-bold rounded-xl hover:bg-white/5 transition-all duration-300;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+}
